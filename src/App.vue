@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="app">
+    <h1 class="app__header">Тестовое приложение</h1>
+    <nav>
+      <router-link :to="{name: 'posts'}" class="btn btn-warning edit-post-link">Посты</router-link>
+      <router-link :to="{name: 'create'}" class="btn btn-warning edit-post-link">Создать Пост</router-link>
+    </nav>
+              <br/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
-};
+  name: "App"
+}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app {
+  padding: 20px;
+}
+.btn-warning {
+  margin-right: 20px;
 }
 </style>
